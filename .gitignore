@@ -1,0 +1,10 @@
+# C++ compiled files
+*.exe
+*.out
+*.o
+
+# VS Code settings
+.vscode/
+
+# system files
+.DS_Store

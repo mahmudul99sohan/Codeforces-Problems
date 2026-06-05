@@ -14,11 +14,23 @@ void solve() {
     int n;
     cin >> n;
 
-    vector <int> v(n);
-
+    // vector <int> v(n);
+    map <int,int> mp;
+    int x;
     for(int i = 0; i < n; i++) {
-    	cin >> v[i];
+    	cin >> x;
+        mp[x]++;
     }
+
+    int cnt = 0;
+
+	for(auto [key, fr] : mp) {
+		cnt += max(0, fr - mp[key - 1]);
+	}
+
+    
+
+    cout << cnt << '\n';
 }
 
 int main() {
